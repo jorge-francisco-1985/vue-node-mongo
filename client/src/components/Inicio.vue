@@ -1,7 +1,6 @@
 <template>
-    <v-container fluid grid-list-md>
-        <v-layout row>
-            <v-flex xs12 sm6 offset-sm3>
+    <v-layout row>
+            <v-flex xs12 sm12>
                 <v-card>
                     <v-list two-line>
                         <template v-for="(item, index) in posts">
@@ -27,6 +26,7 @@
                                 <img :src="item.avatar">
                             </v-list-tile-avatar> -->
 
+
                             <v-list-tile-content>
                                 <v-list-tile-title v-html="item.text"></v-list-tile-title>
                                 <!-- <v-list-tile-sub-title v-html="item.subtitle"></v-list-tile-sub-title> -->
@@ -37,7 +37,6 @@
                 </v-card>
             </v-flex>
         </v-layout>
-    </v-container>
 </template>
 
 

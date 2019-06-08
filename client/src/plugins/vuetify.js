@@ -2,16 +2,18 @@ import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
 import 'vuetify/src/stylus/app.styl'
 import es from 'vuetify/es5/locale/es'
+import colors from 'vuetify/es5/util/colors'
+
 
 Vue.use(Vuetify, {
   theme: {
-    primary: '#ee44aa',
-    secondary: '#424242',
-    accent: '#82B1FF',
-    error: '#FF5252',
-    info: '#2196F3',
-    success: '#4CAF50',
-    warning: '#FFC107'
+    primary: colors.deepOrange.base,
+    secondary: colors.orange.base,
+    accent: colors.red.base,
+    error: colors.pink.base,  
+    warning: colors.amber.base,
+    info: colors.cyan.base,
+     success: colors.lightGreen.base
   },
   options: {
     customProperties: true

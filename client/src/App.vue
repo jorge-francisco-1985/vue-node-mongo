@@ -1,11 +1,29 @@
 <template>
-  <v-app id="inspire" dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      clipped
+  <v-app id="inspire" >
+    
+    <v-toolbar 
       fixed
       app
+      clipped-right
+      color="white"
     >
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    </v-toolbar>
+    <v-navigation-drawer
+      v-model="drawer"
+      class=""
+      fixed
+      app
+      
+    >
+    <v-toolbar 
+      
+      
+      class="white"
+    >
+      
+      <v-toolbar-title>Application</v-toolbar-title>
+    </v-toolbar>
       <v-list dense>
         <v-list-tile :to="{name:'inicio'}">
           <v-list-tile-action>
@@ -25,12 +43,8 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app fixed clipped-left>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-toolbar>
     <v-content>
-      <v-container fluid fill-height>
+      <v-container  >
         <v-slide-y-transition mode="out-in">
           <router-view/>
         </v-slide-y-transition>  
